@@ -14,7 +14,7 @@ const Success = () => {
   useEffect(() => {
     const createOrder = async () => {
       try {
-        const res = await userRequest.post("/orders", {
+        const res = await userRequest.post("/orders", { //post an order to the database
           userId: currentUser._id,
           products: cart.products.map((item) => ({
             productId: item._id,

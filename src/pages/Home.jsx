@@ -10,12 +10,11 @@ import Slider from "../components/Slider";
 const Home = () => {
   return (
     <div>
-      <Announcement />
       <Navbar />
-      <Slider />
+      {/*<Slider />*/}
       <Categories />
-      <Products/>
-      <Newsletter/>
+      {/*<Products/>*/}
+      {/*<Newsletter/>*/}
       <Footer/>
     </div>
   );

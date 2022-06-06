@@ -15,11 +15,12 @@ import { useSelector } from "react-redux";
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
+  // console.log('user', user)
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          {user ? <Redirect to="/login" /> : <Home />}
+          {!user ? <Redirect to="/login" /> : <Home />}
         </Route>
         <Route path="/products/:category">
           <ProductList />
@@ -34,8 +35,10 @@ const App = () => {
           <Success />
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
-        <Route path="/register"> {user ? <Redirect to="/" /> : <Register />}
-        </Route>
+        {/*<Route path="/register">{user ? <Redirect to="/" /> : <Register />}*/}
+        <Route path="/register"><Register />}
+
+      </Route>
       </Switch>
     </Router>
   );

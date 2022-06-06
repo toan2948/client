@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -52,6 +53,7 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  margin-bottom: 10px
 `;
 
 const Register = () => {
@@ -71,7 +73,14 @@ const Register = () => {
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
           <Button>CREATE</Button>
+
         </Form>
+        <p> Einloggen, wenn Sie schon ein Konto haben</p>
+        <Link to="/login">
+          <Button
+
+          >Login</Button>
+        </Link>
       </Wrapper>
     </Container>
   );

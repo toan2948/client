@@ -155,7 +155,6 @@ const Product = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} />
@@ -190,7 +189,6 @@ const Product = () => {
           </AddContainer>
         </InfoContainer>
       </Wrapper>
-      <Newsletter />
       <Footer />
     </Container>
   );

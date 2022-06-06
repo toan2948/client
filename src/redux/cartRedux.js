@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
+  // this is used in Navbar, the quantity is showed in the badge
   name: "cart",
   initialState: {
     products: [],
@@ -10,7 +11,7 @@ const cartSlice = createSlice({
   reducers: {
     addProduct: (state, action) => {
       state.quantity += 1;
-      state.products.push(action.payload);
+      state.products.push(action.payload); // payload = a new product
       state.total += action.payload.price * action.payload.quantity;
     },
   },

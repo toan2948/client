@@ -22,26 +22,27 @@ export const sliderItems = [
     },
   ];
 
-  export const categories = [
-    {
-      id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
-      cat:"women"
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
-    },
-    {
-      id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
-    },
-  ];
+export const categories = [
+  {
+    id: 1,
+    img: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    title: "SHIRT STYLE!",
+    cat: "woman"
+  },
+  {
+    id: 2,
+    img: "https://media.istockphoto.com/photos/portrait-of-handsome-young-man-wearing-sunglasses-and-white-tshirt-picture-id1311078906?b=1&k=20&m=1311078906&s=170667a&w=0&h=EWdNbg9hwM21eqveQGGpx1QTkpOOI6Bs8qIaeKcdkQ0=",
+    title: "LOUNGEWEAR LOVE",
+    cat: "man"
+  },
+  {
+    id: 3,
+    img: "https://thumbs.dreamstime.com/b/men-s-jeans-isolated-white-background-75836874.jpg",
+    title: "LIGHT JACKETS",
+    cat: "coat"
+
+  },
+];
 
   export const popularProducts = [
     {

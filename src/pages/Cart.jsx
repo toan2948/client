@@ -9,6 +9,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import {Link} from "react-router-dom";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -185,16 +186,19 @@ const Cart = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <TopButton>
+            <Link to="/">
+              CONTINUE SHOPPING
+            </Link>
+          </TopButton>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-            <TopText>Your Wishlist (0)</TopText>
+            {/*<TopText>Shopping Bag(2)</TopText>*/}
+            {/*<TopText>Your Wishlist (0)</TopText>*/}
           </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          {/*<TopButton type="filled">CHECKOUT NOW</TopButton>*/}
         </Top>
         <Bottom>
           <Info>
@@ -248,7 +252,7 @@ const Cart = () => {
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="Lama Shop"
+              name=" Shop"
               image="https://avatars.githubusercontent.com/u/1486366?v=4"
               billingAddress
               shippingAddress
@@ -257,7 +261,7 @@ const Cart = () => {
               token={onToken}
               stripeKey={KEY}
             >
-              <Button>CHECKOUT NOW</Button>
+              <Button>CHECKOUT NOW</Button> // this will open the window for payment
             </StripeCheckout>
           </Summary>
         </Bottom>
